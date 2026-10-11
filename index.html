@@ -6913,7 +6913,7 @@
             })
             .then(html => {
               const currentTab = getGameTabById(tabId);
-              html = html.replaceAll('fastly.jsdelivr.net', 'fastly.jsdelivr.net');
+              html = html.replaceAll('cdn.jsdelivr.net', 'fastly.jsdelivr.net');
               if (currentTab && currentTab.loadToken === loadToken) {
                 currentTab.frame.srcdoc = injectFreezeHarnessIntoHtml(html);
               }
